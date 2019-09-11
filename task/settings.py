@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     # DRF
     'rest_framework',
     'rest_framework.authtoken',
+    # CORS
+    'corsheaders'
     # app
     'api',
 ]
