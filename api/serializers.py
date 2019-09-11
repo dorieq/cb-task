@@ -11,9 +11,10 @@ class UserSerializer(serializers.Serializer):
 
 class ReviewSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
-    name = serializers.CharField()
+    title = serializers.CharField()
     created_by = UserSerializer(read_only=True)
-
+    date = serializers.DateField()
+    
     class Meta:
         model = Review
         fields = ('id', 'rating', 'title', 'date',)
