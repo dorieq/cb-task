@@ -5,7 +5,7 @@ from api.models import Review
 from api.serializers import ReviewSerializer
 
 
-class ContactList(generics.ListCreateAPIView):
+class ReviewList(generics.ListCreateAPIView):
     serializer_class = ReviewSerializer
     permission_classes = (IsAuthenticated,)
 
