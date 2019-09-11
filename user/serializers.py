@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.hashers import BCryptSHA256PasswordHasher
 from rest_framework import serializers
 
-class UserSeariler(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
 
     encoder = BCryptSHA256PasswordHasher()
     password = serializers.CharField(write_only=True)
